@@ -1,0 +1,25 @@
+  <table class="center">
+    <thead>
+      <tr>
+        <th>Year</th>
+        <th>Annual Investment</th>
+        <th>Interest</th>
+        <th>Total Amount Invested</th>
+        <th>Total Interest</th>
+        <th>Value at End of Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (record of tableRecord; track record.year) {
+        <tr>
+          <td>{{ record.year }}</td>
+          <td>{{ record.annualInvestment.toString() | currency:'JOD' }}</td>
+          <td>{{ record.interest.toString() | currency:'JOD' }}</td>
+          <td>{{ record.totalAmountInvested.toString() | currency:'JOD' }}</td>
+          <td>{{ record.totalInterest.toString() | currency:'JOD' }}</td>
+          <td>{{ record.valueEndOfYear.toString() | currency:'JOD' }}</td>
+        </tr>
+    }
+  </tbody>
+</table>
+

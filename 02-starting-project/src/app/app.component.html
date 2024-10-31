@@ -1,0 +1,9 @@
+<app-header></app-header>
+<app-calculater-card (records)="onCalculate($event)" ></app-calculater-card>
+@if (record) {
+    <app-table [tableRecord]="record"></app-table>
+}@else {
+    <p>
+        Please enter some values and press "Calculate"
+    </p>
+}
